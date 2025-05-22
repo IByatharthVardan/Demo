@@ -1,0 +1,24 @@
+{
+    "source": {
+        "is_advanced": false,
+        "project_id": "019680f7-340f-7fb6-a3ea-81666822aed5",
+        "flow_path": "",
+        "sb_name": "",
+        "flow_name": "",
+        "org": "kering-test",
+        "workspace": "Utilities-Workspace-Dev",
+        "app_id": "",
+        "deployment_id": "",
+        "dependencies": []
+    },
+    "target": {
+        "org": "kering",
+        "workspace": "Utilities-Workspace-Dev",
+        "project_id": ""
+    },
+    "settings": {
+        "rebuild": true
+    },
+    "regression": {},
+    "release_notes": "Migration from MT instance to ST instance"
+}
