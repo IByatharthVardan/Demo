@@ -1,0 +1,25 @@
+{
+    "appReleaseVersion": "",
+    "author": "yatharth.vardan.kering_instabase.com",
+    "contextAccount": "kering-test",
+    "createdAtMs": "1747911531000",
+    "description": "No release notes",
+    "id": "e706716f-aa7b-4a4a-beac-213401a7cf3c",
+    "isCustomizable": false,
+    "linkSharingMode": "OFF",
+    "metadata": "{\"authors\": [\"yatharth.vardan.kering_instabase.com\"], \"icon\": \"icon.png\", \"samples\": \"\", \"results\": \"\", \"schema\": \"schema.json\", \"project_id\": \"019680f7-340f-7fb6-a3ea-81666822aed5\", \"billing_model\": \"default\", \"has_project_snapshot\": true, \"org_context_type\": \"ENTERPRISE\", \"is_copy_of_existing_app\": false}",
+    "name": "Utilities-dummy",
+    "owner": "yatharth.vardan.kering_instabase.com",
+    "ownerFullName": "Yatharth Vardan",
+    "sharedAccounts": [
+        "kering-test"
+    ],
+    "solutionType": "EXTRACTION",
+    "solution_path": "system/global/fs/Instabase Drive/Applications/Deployed/All/e706716f-aa7b-4a4a-beac-213401a7cf3c",
+    "state": "PRODUCTION",
+    "summary": "This is a dummy app, to migrate the project",
+    "updateMode": "AUTO_UPDATE",
+    "updatedAtMs": "1747911537000",
+    "version": "0.0.1",
+    "visibility": "PRIVATE"
+}
