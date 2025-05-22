@@ -1,0 +1,96 @@
+name: Regression Suite
+
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to run regression suite"
+        required: true
+        default: "main"
+
+jobs:
+  regression_suite:
+    name: Regression Suite
+    runs-on: ubuntu-latest
+    env:
+      SOURCE_HOST_URL: ${{ secrets.SOURCE_HOST_URL }}
+      SOURCE_TOKEN: ${{ secrets.SOURCE_TOKEN }}
+      TARGET_HOST_URL: ${{ secrets.TARGET_HOST_URL }}
+      TARGET_TOKEN: ${{ secrets.TARGET_TOKEN }}
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Validate config.json
+        id: validate_config
+        run: |
+          if [ ! -f config.json ]; then
+            echo "Error: config.json file not found"
+            exit 1
+          fi
+
+          REGRESSION_COUNT=$(jq -r '.regression | length' config.json)
+          if [ "$REGRESSION_COUNT" -eq 0 ]; then
+            echo "No regression tests found, skipping workflow."
+            echo "skip_workflow=true" >> $GITHUB_ENV
+            exit 0
+          fi
+
+      - name: Install dependencies
+        if: env.skip_workflow != 'true'
+        run: |
+          python -m pip install --upgrade pip
+          pip install pipx
+          
+          # Attempt to install from local file first
+          VERSION=$(ls cicd_aihub-*-py3-none-any.whl | sed 's/cicd_aihub-\(.*\)-py3-none-any.whl/\1/' | head -n 1)
+
+          if [ -n "$VERSION" ]; then
+            echo "Found local .whl file: cicd_aihub-${VERSION}-py3-none-any.whl"
+            pipx install cicd_aihub-${VERSION}-py3-none-any.whl
+          else
+            echo "No local .whl file found. Attempting to install from GitHub release."
+            LATEST_RELEASE=$(curl -s https://api.github.com/repos/instabase/aihub-apps-ci-cd-workflows/releases/latest | jq -r .tag_name)
+            VERSION=$(echo $LATEST_RELEASE | sed 's/^v//')
+            
+            if ! pipx install https://github.com/instabase/aihub-apps-ci-cd-workflows/releases/download/${LATEST_RELEASE}/cicd_aihub-${VERSION}-py3-none-any.whl; then
+              echo "Failed to install from GitHub release after failing to find local .whl file. Aborting."
+              exit 1
+            fi
+          fi
+
+      - name: Run regression tests
+        if: env.skip_workflow != 'true'
+        run: |
+          IS_ADVANCED=$(jq -r '.source.is_advanced' config.json)
+          SB_NAME=$(jq -r '.source.sb_name' config.json)
+          FLOW_PATH=$(jq -r '.source.flow_path' config.json)
+
+          if [ "$IS_ADVANCED" = "true" ] && [ -n "$FLOW_PATH" ] && [ "$FLOW_PATH" != "null" ]; then
+            promote-solution --regression
+          elif [ "$IS_ADVANCED" = "true" ] && [ -n "$SB_NAME" ] && [ "$SB_NAME" != "null" ]; then
+            promote-sb-solution --regression
+          else
+            promote-build-solution --regression
+          fi
+      
+      - name: Commit regression results to feature branch
+        if: env.skip_workflow != 'true'
+        run: |
+          git config --global user.email "no-reply@github.com"
+          git config --global user.name "GitHub Actions"
+          git config --global --add safe.directory /__w/${{ github.event.repository.name }}/*
+          COMMIT_MESSAGE="Regression Results added"
+          git add -f regression_output/
+          git status
+          git commit -m "$COMMIT_MESSAGE" --allow-empty
+          git fetch origin ${{ github.head_ref }}
+          git rebase origin/${{ github.head_ref }}
+          git push origin HEAD:${{ github.head_ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
