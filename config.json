@@ -14,10 +14,10 @@
     "target": {
         "org": "kering",
         "workspace": "Utilities-Workspace-Dev",
-        "project_id": "0196f7bf-b8c3-73d6-b1a6-461945ae5411"
+        "project_id": ""
     },
     "settings": {
-        "rebuild": false
+        "rebuild": true
     },
     "regression": {},
     "release_notes": "Migration from MT instance to ST instance"
