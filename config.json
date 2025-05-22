@@ -1,20 +1,20 @@
 {
     "source": {
         "is_advanced": false,
-        "project_id": "019680f7-340f-7fb6-a3ea-81666822aed5",
+        "project_id": "0195ad8c-4742-799a-a07e-37ddb52ecf11",
         "flow_path":  "",
         "sb_name": "",
         "flow_name": "",
         "org": "kering-test",
-        "workspace": "Utilities-Workspace-Dev",
-        "app_id": "e706716f-aa7b-4a4a-beac-213401a7cf3c",
-        "deployment_id": "",
+        "workspace": "SSC-France",
+        "app_id": "50c0ddca-e60f-40a9-ac68-17465998f3dd",
+        "deployment_id": "0195ad98-876c-73e2-bf28-5b27726e68fc",
         "dependencies": []
     },
     "target": {
         "org": "kering",
-        "workspace": "Utilities-Workspace-Dev",
-        "project_id": ""
+        "workspace": "SSC-France",
+        "project_id":""
     },
     "settings": {
         "rebuild": true

@@ -1,28 +1,28 @@
 {
     "projects": [
         {
-            "active_deployed_solution_id": "e706716f-aa7b-4a4a-beac-213401a7cf3c",
-            "createdAtMs": "1745920407000",
-            "creation_base": "NONE",
-            "data_root": "kering-test/Utilities-Workspace-Dev/fs/Instabase Drive/aihub/019680f7-340f-7fb6-a3ea-81666822aed5",
-            "desc": "New project",
+            "active_deployed_solution_id": null,
+            "createdAtMs": "1742373407000",
+            "creation_base": "PROJECT",
+            "data_root": "kering-test/SSC-France/fs/Instabase Drive/aihub/0195ad8c-4742-799a-a07e-37ddb52ecf11",
+            "desc": "",
             "extraction_mode": "CLASSIFICATION",
-            "id": "019680f7-340f-7fb6-a3ea-81666822aed5",
+            "id": "0195ad8c-4742-799a-a07e-37ddb52ecf11",
             "llm": "gpt-3.5-turbo",
             "matches_default_drive": true,
-            "name": "Utilities app",
+            "name": "Lease-Contract-Parser-2.0",
             "needs_migration": false,
             "owner": "1ba49c08-d800-4029-981f-c8b992f2b967",
             "ownerPublicId": "khadija.boubahri-ext_kering.com",
-            "project_root": "kering-test/Utilities-Workspace-Dev/fs/Instabase Drive/aihub/019680f7-340f-7fb6-a3ea-81666822aed5",
+            "project_root": "kering-test/SSC-France/fs/Instabase Drive/aihub/0195ad8c-4742-799a-a07e-37ddb52ecf11",
             "reader_profile": {
                 "createdBy": "",
-                "createdOn": 1745920640196,
+                "createdOn": 1741771465457,
                 "defaultProfile": "",
                 "foundationVersion": "",
                 "inputPath": null,
                 "lastModifiedBy": "",
-                "lastModifiedOn": 1745920640196,
+                "lastModifiedOn": 1741771465457,
                 "outputPath": null,
                 "profiles": [
                     {
@@ -92,7 +92,7 @@
                 ],
                 "schema": "1"
             },
-            "repo_id": "d3e55119-8263-4f9c-b91b-673b323e412a",
+            "repo_id": "7e2577e9-7ad0-4026-a136-0ddd99113add",
             "settings": {
                 "advanced_ocr": {
                     "isChangeLanguageType": false,
@@ -106,8 +106,8 @@
                     "version": "v1"
                 }
             },
-            "updatedAtMs": "1745931607000",
-            "workspace": "Utilities-Workspace-Dev"
+            "updatedAtMs": "1742828759000",
+            "workspace": "SSC-France"
         }
     ]
 }

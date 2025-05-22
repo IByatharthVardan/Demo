@@ -1,215 +1,783 @@
 {
-    "178885": {
+    "162105": {
         "description": "",
         "fields": {
-            "574480": {
+            "498995": {
                 "data_type": "TEXT",
-                "description": "ID invoice",
-                "lines": [],
+                "description": "D",
+                "lines": [
+                    {
+                        "function_args": [],
+                        "function_id": null,
+                        "line_type": "PROMPT",
+                        "native_fn_name": null,
+                        "prompt": "Extract the date only dd/mmm/yyyy"
+                    }
+                ],
                 "model_type": "DEFAULT",
-                "name": "ID invoice",
-                "position": 0,
-                "prompt": "ID invoice",
-                "prompt_schema": null,
-                "prompt_type": "basic"
-            },
-            "574481": {
-                "data_type": "TEXT",
-                "description": "Vendor name",
-                "lines": [],
-                "model_type": "DEFAULT",
-                "name": "Vendor name",
-                "position": 1,
-                "prompt": "Vendor name",
-                "prompt_schema": null,
-                "prompt_type": "basic"
-            },
-            "574482": {
-                "data_type": "TEXT",
-                "description": "Country",
-                "lines": [],
-                "model_type": "DEFAULT",
-                "name": "Country",
-                "position": 2,
-                "prompt": "Country",
-                "prompt_schema": null,
-                "prompt_type": "basic"
-            },
-            "574483": {
-                "data_type": "TEXT",
-                "description": "Client name",
-                "lines": [],
-                "model_type": "DEFAULT",
-                "name": "Entity or brand name",
-                "position": 3,
-                "prompt": "Entity or brand name",
-                "prompt_schema": null,
-                "prompt_type": "basic"
-            },
-            "574484": {
-                "data_type": "TEXT",
-                "description": "Write the full address",
-                "lines": [],
-                "model_type": "DEFAULT",
-                "name": "Billing Address",
+                "name": "Lease expiration date",
                 "position": 4,
-                "prompt": "Billing Address",
+                "prompt": "Date at which the lease terminates( with disregard of any renewal/break option) if it's not explicitly written, calculate from the execution date.",
                 "prompt_schema": null,
-                "prompt_type": "basic"
+                "prompt_type": "advanced"
             },
-            "574485": {
+            "498996": {
                 "data_type": "TEXT",
-                "description": "Write the full adress",
+                "description": "Explanation Expiration date",
                 "lines": [],
                 "model_type": "DEFAULT",
-                "name": "Delivery point",
+                "name": "Explanation of expiration date",
                 "position": 5,
-                "prompt": "Delivery point",
-                "prompt_schema": null,
-                "prompt_type": "basic"
-            },
-            "574486": {
-                "data_type": "TEXT",
-                "description": "choose between : \" ELECTRICITY, FUEL, COAL, GAZ, WATER\"",
-                "lines": [],
-                "model_type": "DEFAULT",
-                "name": "Utility type",
-                "position": 6,
-                "prompt": "choose between : \" ELECTRICITY, FUEL, COAL, GAZ, WATER\" and write the answer only",
+                "prompt": "What is the expiration date and why?",
                 "prompt_schema": null,
                 "prompt_type": "advanced"
             },
-            "574490": {
+            "498997": {
                 "data_type": "TEXT",
-                "description": "Period of consumption write in this format",
+                "description": "Landlord name",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Landlord name",
+                "position": 1,
+                "prompt": "Landlord name",
+                "prompt_schema": null,
+                "prompt_type": "basic"
+            },
+            "498998": {
+                "data_type": "TEXT",
+                "description": "D",
                 "lines": [
                     {
                         "function_args": [],
                         "function_id": null,
                         "line_type": "PROMPT",
                         "native_fn_name": null,
-                        "prompt": "Write in this format Start date - End Date, and both date in DD/MM/YYYY"
+                        "prompt": "If the date is found, extract it in this format dd/mmm/yyyy else keep the text"
                     }
                 ],
                 "model_type": "DEFAULT",
-                "name": "Period of consumption",
+                "name": "Contract signing date",
                 "position": 7,
-                "prompt": "Period of consumption",
+                "prompt": "Date at which the current contract has been signed.",
                 "prompt_schema": null,
                 "prompt_type": "advanced"
             },
-            "574491": {
+            "498999": {
                 "data_type": "TEXT",
-                "description": "Start date",
-                "lines": [
-                    {
-                        "function_args": [],
-                        "function_id": null,
-                        "line_type": "PROMPT",
-                        "native_fn_name": null,
-                        "prompt": "format in DD/MM/YYYY"
-                    }
-                ],
-                "model_type": "DEFAULT",
-                "name": "Start date",
-                "position": 8,
-                "prompt": "Start date",
-                "prompt_schema": null,
-                "prompt_type": "basic"
-            },
-            "574492": {
-                "data_type": "TEXT",
-                "description": "End date",
-                "lines": [
-                    {
-                        "function_args": [],
-                        "function_id": null,
-                        "line_type": "PROMPT",
-                        "native_fn_name": null,
-                        "prompt": "Format in DD/MM/YYYY"
-                    }
-                ],
-                "model_type": "DEFAULT",
-                "name": "End date",
-                "position": 9,
-                "prompt": "End date",
-                "prompt_schema": null,
-                "prompt_type": "basic"
-            },
-            "574493": {
-                "data_type": "TEXT",
-                "description": "Volume consumed",
+                "description": "Remit to",
                 "lines": [],
                 "model_type": "DEFAULT",
-                "name": "Total volume",
-                "position": 10,
-                "prompt": "Total volume",
-                "prompt_schema": null,
-                "prompt_type": "basic"
-            },
-            "574494": {
-                "data_type": "TEXT",
-                "description": "DescEnergy mix",
-                "lines": [],
-                "model_type": "DEFAULT",
-                "name": "Energy mix",
-                "position": 11,
-                "prompt": "Extract the energy mix or state \"I can't find the energy mix.\"",
-                "prompt_schema": null,
-                "prompt_type": "advanced"
-            },
-            "574504": {
-                "data_type": "TEXT",
-                "description": "Tpt",
-                "lines": [],
-                "model_type": "DEFAULT",
-                "name": "Spends Original HT",
+                "name": "Remit to",
                 "position": 12,
-                "prompt": "Total de la facture en hors taxe",
+                "prompt": "Who is this remit to?",
                 "prompt_schema": null,
                 "prompt_type": "advanced"
             },
-            "574565": {
+            "499000": {
                 "data_type": "TEXT",
-                "description": "Total amount",
+                "description": "W",
                 "lines": [],
                 "model_type": "DEFAULT",
-                "name": "Total Amount in Euro",
+                "name": "Lease rentable area",
                 "position": 13,
-                "prompt": "Total amount in euro",
+                "prompt": "What is the total lease rentable area",
                 "prompt_schema": null,
                 "prompt_type": "advanced"
             },
-            "574566": {
+            "499001": {
                 "data_type": "TEXT",
-                "description": "choose between RAE / POD / POINT OF DELIVERY / PDR / PDL",
+                "description": "WLease usable area",
+                "lines": [
+                    {
+                        "function_args": [],
+                        "function_id": null,
+                        "line_type": "PROMPT",
+                        "native_fn_name": null,
+                        "prompt": "keep only the amount and the unit"
+                    }
+                ],
+                "model_type": "DEFAULT",
+                "name": "Lease usable area",
+                "position": 11,
+                "prompt": "What is the total usable area",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "499002": {
+                "data_type": "TEXT",
+                "description": "Variable rent component",
                 "lines": [],
                 "model_type": "DEFAULT",
-                "name": "Meter reference",
-                "position": 14,
-                "prompt": "Meter reference",
+                "name": "Variable rent component",
+                "position": 16,
+                "prompt": "Does the lease has a variable rent component based on sales?",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "499003": {
+                "data_type": "TEXT",
+                "description": "Does the rent follows an index to update the rent?",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Index rent and condition",
+                "position": 17,
+                "prompt": "Does the rent follows an index to update the rent, and if it's the case, what are the conditions",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "499004": {
+                "data_type": "TEXT",
+                "description": "Fixed rent value",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Fixed rent",
+                "position": 15,
+                "prompt": "Rent Payment amount.",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "499005": {
+                "data_type": "TEXT",
+                "description": "Option renewal option",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Option renewal or termination option",
+                "position": 22,
+                "prompt": "Is there a renewal or termination option in the contract?",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "499006": {
+                "data_type": "TEXT",
+                "description": "Is there a deposit to be done and what it the amount?",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Is there a deposit",
+                "position": 18,
+                "prompt": "Is there a deposit to be paid? what is the date and the amount?",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "499007": {
+                "data_type": "TEXT",
+                "description": "I",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Free rent period",
+                "position": 19,
+                "prompt": "Is there a free rent period?",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "499009": {
+                "data_type": "TEXT",
+                "description": "I",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Key money",
+                "position": 21,
+                "prompt": "Is there any key money contribution to be paid?",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "499010": {
+                "data_type": "TEXT",
+                "description": "EXtract Termination Clause",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Termination clause",
+                "position": 23,
+                "prompt": "Extract the termination clause",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "499011": {
+                "data_type": "TEXT",
+                "description": "Tenant name",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Tenant name",
+                "position": 2,
+                "prompt": "Tenant name",
                 "prompt_schema": null,
                 "prompt_type": "basic"
             },
-            "581466": {
+            "499012": {
                 "data_type": "TEXT",
-                "description": "what is the measure in the document",
+                "description": "Find Store Name",
                 "lines": [],
                 "model_type": "DEFAULT",
-                "name": "Unity",
-                "position": 15,
-                "prompt": "Unity",
+                "name": "Store name",
+                "position": 0,
+                "prompt": "What is this location known name ?",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "499013": {
+                "data_type": "TEXT",
+                "description": "Ex",
+                "lines": [
+                    {
+                        "function_args": [],
+                        "function_id": null,
+                        "line_type": "PROMPT",
+                        "native_fn_name": null,
+                        "prompt": "If the date is found, extract it in this format dd/mmm/yyyy else keep the text"
+                    }
+                ],
+                "model_type": "DEFAULT",
+                "name": "Commencement date or Execution date",
+                "position": 3,
+                "prompt": "commencement date of the lease",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "499014": {
+                "data_type": "TEXT",
+                "description": "Opening date",
+                "lines": [
+                    {
+                        "function_args": [],
+                        "function_id": null,
+                        "line_type": "PROMPT",
+                        "native_fn_name": null,
+                        "prompt": "If the date is found, extract it in this format dd/mmm/yyyy else keep the text"
+                    }
+                ],
+                "model_type": "DEFAULT",
+                "name": "Opening date _ to check with operations",
+                "position": 8,
+                "prompt": "Opening date",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "499015": {
+                "data_type": "TEXT",
+                "description": "wRent commencement date",
+                "lines": [
+                    {
+                        "function_args": [],
+                        "function_id": null,
+                        "line_type": "PROMPT",
+                        "native_fn_name": null,
+                        "prompt": "If the date is found, extract it in this format dd/mmm/yyyy else keep the text"
+                    }
+                ],
+                "model_type": "DEFAULT",
+                "name": "Rent payment commencement date",
+                "position": 6,
+                "prompt": "when is the Rent commencement date ?",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "499016": {
+                "data_type": "TEXT",
+                "description": "Term Length",
+                "lines": [
+                    {
+                        "function_args": [],
+                        "function_id": null,
+                        "line_type": "PROMPT",
+                        "native_fn_name": null,
+                        "prompt": "keep only the number and the unit"
+                    }
+                ],
+                "model_type": "DEFAULT",
+                "name": "Term length",
+                "position": 10,
+                "prompt": "Term length",
                 "prompt_schema": null,
                 "prompt_type": "basic"
+            },
+            "499017": {
+                "data_type": "TEXT",
+                "description": "MBa",
+                "lines": [],
+                "model_type": "ADVANCED",
+                "name": "Minimum rent",
+                "position": 14,
+                "prompt": "Based on Minimum Rent per area, I need you to create a table where you put in each column this information : \n1. Lease year\n2. Start date\n3. End date\n4. Amount/Area\n5. Monthly amount \n6. % Increase",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "499018": {
+                "data_type": "TEXT",
+                "description": "Co Tenancy conditions,",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Co Tenancy",
+                "position": 25,
+                "prompt": "Co Tenancy conditions: Is Tenant allowed to terminate? Is Rent reduction allowed?",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "499019": {
+                "data_type": "TEXT",
+                "description": "extract holdover",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Holdover",
+                "position": 27,
+                "prompt": "extract holdover information",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "499020": {
+                "data_type": "TEXT",
+                "description": "TA allowance if not found write",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Landlord contribution _ Tenant allowance",
+                "position": 24,
+                "prompt": "extract TA allowance if existing",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "511511": {
+                "data_type": "TEXT",
+                "description": "Guarantee or",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Guarantee",
+                "position": 20,
+                "prompt": "Extract the information about the guarantee and the letter of credit",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "511566": {
+                "data_type": "TEXT",
+                "description": "Extract the Radius clause",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Radius clause",
+                "position": 26,
+                "prompt": "Extract the radius clause from the document if existant",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "511864": {
+                "data_type": "TEXT",
+                "description": "possession date",
+                "lines": [
+                    {
+                        "function_args": [],
+                        "function_id": null,
+                        "line_type": "PROMPT",
+                        "native_fn_name": null,
+                        "prompt": "If the date is found, extract it in this format dd/mmm/yyyy else keep the text"
+                    }
+                ],
+                "model_type": "DEFAULT",
+                "name": "Handover date",
+                "position": 9,
+                "prompt": "Date the tenant receives the keys to the property and can officially move in.",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "566225": {
+                "data_type": "TEXT",
+                "description": "Can we get the Energy performance certificate",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Energy performance rating",
+                "position": 28,
+                "prompt": "Can we get the information related to energy performance rating and consumption",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "598357": {
+                "data_type": "TEXT",
+                "description": "CAM Operating cost charge",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "CAM cost",
+                "position": 29,
+                "prompt": "CAM cost or operating charge",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "598358": {
+                "data_type": "TEXT",
+                "description": "Is there a Base Year\nWhat is the Pro-rata Share",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Real estate taxes",
+                "position": 30,
+                "prompt": "Is there a Base Year related to taxes?\nWhat is the Pro-rata Share?",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "598359": {
+                "data_type": "TEXT",
+                "description": "Insurance and",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Insurance",
+                "position": 31,
+                "prompt": "Tenant insurance and limits for each policy",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "598360": {
+                "data_type": "TEXT",
+                "description": "Metered - paid directly to Utility Company or to the Landlord, or to the Landlord as part of CAM estimates",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Electricity",
+                "position": 32,
+                "prompt": "Is premises metered or sub metered? Is tenant responsible for meter installation ? Is tenant responsible to pay electric bill to the landlord or to the utility company? Is there an administrative fee and what is the percentage ?",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "598361": {
+                "data_type": "TEXT",
+                "description": "What is the cost per hour for OT HVAC? Is there a minimum of hours for OT HVAC?",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "HVAC",
+                "position": 33,
+                "prompt": "What is the cost per hour for OT HVAC? Is there a minimum of hours for OT HVAC?",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "598363": {
+                "data_type": "TEXT",
+                "description": "water cons",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "water",
+                "position": 34,
+                "prompt": "water consumption",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "598364": {
+                "data_type": "TEXT",
+                "description": null,
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Promo fund charge",
+                "position": 35,
+                "prompt": "Promo fund charge",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "598365": {
+                "data_type": "TEXT",
+                "description": null,
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Media fund charge",
+                "position": 36,
+                "prompt": "Media fund charge",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "598366": {
+                "data_type": "TEXT",
+                "description": "When/ How often to submit to Landlord?\nExclusions \nWho should sign each report?\nCertified or not and by whom?",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Gross sales exclusions",
+                "position": 37,
+                "prompt": "What are the exclusions concerning gross sales",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "598368": {
+                "data_type": "TEXT",
+                "description": "Deadline for Landlord to bill expenses or for Tenant to question expenses",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Conclusive waiver",
+                "position": 38,
+                "prompt": "Deadline for Landlord to bill expenses or for Tenant to question expenses",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "598369": {
+                "data_type": "TEXT",
+                "description": null,
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Permitted use",
+                "position": 39,
+                "prompt": "Permitted use",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "598370": {
+                "data_type": "TEXT",
+                "description": null,
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Relocation Option",
+                "position": 40,
+                "prompt": "Relocation Option",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "598371": {
+                "data_type": "TEXT",
+                "description": "Monetary - days; Is notice from Landlor required?\nNon-monetary - days; Is notice from Landlor required?",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Default",
+                "position": 41,
+                "prompt": "Monetary - days: Is notice from Landlor required?\nNon-monetary - days: Is notice from Landlor required?",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "598547": {
+                "data_type": "TEXT",
+                "description": "Is there Reserved Parking Spaces? If so, what's the cost per month for each space?",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Parking",
+                "position": 42,
+                "prompt": "Is there Reserved Parking Spaces? If so, what's the cost per month for each space?",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "598552": {
+                "data_type": "TEXT",
+                "description": null,
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Surrender and restoration",
+                "position": 43,
+                "prompt": "Surrender and restoration",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "598553": {
+                "data_type": "TEXT",
+                "description": "Policies and",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Tenant Insurance",
+                "position": 44,
+                "prompt": "Policies and limits",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "598554": {
+                "data_type": "TEXT",
+                "description": "Li",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Estoppel and SNDA",
+                "position": 45,
+                "prompt": "List days to complete",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "598555": {
+                "data_type": "TEXT",
+                "description": "Is Landlord's consent required? Is allowed to an affiliate with no Landlord's consent?",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Assignment and subletting",
+                "position": 46,
+                "prompt": "Is Landlord's consent required? Is allowed to an affiliate with no Landlord's consent?",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "598556": {
+                "data_type": "TEXT",
+                "description": "Broker commision and who is",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Broker commision",
+                "position": 47,
+                "prompt": "Broker commision and who is responsible to pay?",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "598558": {
+                "data_type": "TEXT",
+                "description": "Suite number, Floor number, location in the center, etc.",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Premises",
+                "position": 48,
+                "prompt": "Suite number, Floor number, location in the center, etc.",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
             }
         },
-        "name": "Invoices"
+        "name": "Real estate lease contract"
     },
-    "178886": {
+    "162106": {
         "description": "",
         "fields": {},
         "name": "Other"
     },
-    "last_edited_at": "1747752446000",
-    "last_edited_class_at": "1745920777000"
+    "162107": {
+        "description": "Guarantee contracts",
+        "fields": {
+            "566224": {
+                "data_type": "TEXT",
+                "description": "guarantee amount",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Guarantee amount",
+                "position": 4,
+                "prompt": "guarantee amount",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "566714": {
+                "data_type": "TEXT",
+                "description": "Guarantor",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Guarantor",
+                "position": 5,
+                "prompt": "Guarantor",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "566715": {
+                "data_type": "TEXT",
+                "description": "Beneficiary",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Beneficiary organisation lookup",
+                "position": 3,
+                "prompt": "Beneficiary",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "566716": {
+                "data_type": "TEXT",
+                "description": null,
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Tenant",
+                "position": 6,
+                "prompt": "Tenant",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "566717": {
+                "data_type": "TEXT",
+                "description": "If the date is found, extract it in this format dd/mmm/yyyy else keep the text",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Signing date",
+                "position": 11,
+                "prompt": "Signing date",
+                "prompt_schema": null,
+                "prompt_type": "basic"
+            },
+            "567360": {
+                "data_type": "TEXT",
+                "description": null,
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Annual guarantee rates",
+                "position": 7,
+                "prompt": "Annual guarantee rates",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "567361": {
+                "data_type": "TEXT",
+                "description": "Guarantee endate",
+                "lines": [
+                    {
+                        "function_args": [],
+                        "function_id": null,
+                        "line_type": "PROMPT",
+                        "native_fn_name": null,
+                        "prompt": "If the date is found, extract it in this format dd/mmm/yyyy else keep the text"
+                    }
+                ],
+                "model_type": "DEFAULT",
+                "name": "Guarantee expiration date",
+                "position": 9,
+                "prompt": "Guarantee expiration date",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "567362": {
+                "data_type": "TEXT",
+                "description": null,
+                "lines": [
+                    {
+                        "function_args": [],
+                        "function_id": null,
+                        "line_type": "PROMPT",
+                        "native_fn_name": null,
+                        "prompt": "If the date is found, extract it in this format dd/mmm/yyyy else keep the text"
+                    }
+                ],
+                "model_type": "DEFAULT",
+                "name": "Guarantee start date",
+                "position": 10,
+                "prompt": "Guarantee start date",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "568010": {
+                "data_type": "TEXT",
+                "description": "May be Bank, Intercompany or other",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Guarantee issuer type",
+                "position": 0,
+                "prompt": "Guarantee issuer type",
+                "prompt_schema": null,
+                "prompt_type": "basic"
+            },
+            "568011": {
+                "data_type": "TEXT",
+                "description": "Int",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Relevant organization lookup",
+                "position": 1,
+                "prompt": "Internal company who initiate the request for guarantee",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "568015": {
+                "data_type": "TEXT",
+                "description": "Company whi s",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Counter Guarantee",
+                "position": 2,
+                "prompt": "If there is several financial guarantee in order to be in concordance with local restrictions, if there's isn't write \"No\"",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "568016": {
+                "data_type": "TEXT",
+                "description": "Guarantee",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Guarantee type",
+                "position": 8,
+                "prompt": "if Guarantee type is \"autonomous bank guarantee on first demand\" write \"First Demand Guarantee\" else write guarantee type",
+                "prompt_schema": null,
+                "prompt_type": "advanced"
+            },
+            "568017": {
+                "data_type": "TEXT",
+                "description": "Currency",
+                "lines": [],
+                "model_type": "DEFAULT",
+                "name": "Currency",
+                "position": 12,
+                "prompt": "Currency",
+                "prompt_schema": null,
+                "prompt_type": "basic"
+            }
+        },
+        "name": "Guarantee"
+    },
+    "last_edited_at": "1747925861000",
+    "last_edited_class_at": "1745395940000"
 }
