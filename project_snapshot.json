@@ -1,0 +1,585 @@
+{
+    "project_data": {
+        "createdAtMs": "1727103578000",
+        "creationBase": "PROJECT",
+        "dataMountPath": "kering-test/SSC-France/fs/Instabase Drive/aihub/01921f65-30f7-7aef-9d06-15eb7d24f13f",
+        "description": "",
+        "extractionMode": "CLASSIFICATION",
+        "id": "01921f65-30f7-7aef-9d06-15eb7d24f13f",
+        "llm": "gpt-3.5-turbo",
+        "name": "SSC-France-Contract-Parser",
+        "owner": "e0109f22-ce37-42e1-a50b-7d95d3f5fd33",
+        "ownerPublicId": "romain.isaac_kering.com",
+        "projectMountPath": "kering-test/SSC-France/fs/Instabase Drive/aihub/01921f65-30f7-7aef-9d06-15eb7d24f13f",
+        "repoId": "7e2577e9-7ad0-4026-a136-0ddd99113add",
+        "schemaVersion": "1",
+        "settings": {
+            "advanced_ocr": {
+                "isChangeLanguageType": false,
+                "isSelectCheckboxes": true,
+                "isSelectFileAsImage": false,
+                "isSelectTables": true,
+                "languageType": "standard",
+                "nativeExcelProcessing": true,
+                "pagesText": "",
+                "version": "v1"
+            }
+        },
+        "type": "BUILD",
+        "updatedAtMs": "1740404049000",
+        "workspace": "SSC-France"
+    },
+    "project_schema": {
+        "case_fields": [],
+        "classes": {
+            "Freight costs": {
+                "class_id": "138078",
+                "description": "Freight cost statement or invoice extraction",
+                "fields": []
+            },
+            "Lease Data": {
+                "class_id": "84706",
+                "description": "",
+                "fields": [
+                    {
+                        "data_type": "TEXT",
+                        "description": "L",
+                        "field_id": "236873",
+                        "lines": [],
+                        "model_type": "DEFAULT",
+                        "name": "Lease Commencement Date",
+                        "position": 0,
+                        "prompt": "The date at which the contract is effective and why",
+                        "prompt_schema": null,
+                        "prompt_type": "advanced"
+                    },
+                    {
+                        "data_type": "TEXT",
+                        "description": "D",
+                        "field_id": "236874",
+                        "lines": [
+                            {
+                                "function_args": [],
+                                "function_id": null,
+                                "line_type": "PROMPT",
+                                "native_fn_name": null,
+                                "prompt": "take the date only"
+                            },
+                            {
+                                "function_args": [
+                                    {
+                                        "data_type": "TEXT",
+                                        "name": "input__format",
+                                        "value": "\"\""
+                                    },
+                                    {
+                                        "data_type": "TEXT",
+                                        "name": "output__format",
+                                        "value": "\"ddmmyyyy\""
+                                    }
+                                ],
+                                "function_id": null,
+                                "line_type": "NATIVE",
+                                "native_fn_name": "format_date",
+                                "prompt": null
+                            }
+                        ],
+                        "model_type": "DEFAULT",
+                        "name": "Lease Expiration Date",
+                        "position": 2,
+                        "prompt": "Date at which the contract expires",
+                        "prompt_schema": null,
+                        "prompt_type": "advanced"
+                    },
+                    {
+                        "data_type": "TEXT",
+                        "description": "Explanation Expiration date",
+                        "field_id": "236875",
+                        "lines": [],
+                        "model_type": "DEFAULT",
+                        "name": "Explanation Expiration date",
+                        "position": 3,
+                        "prompt": "What is the expiration date and with which rationnal?",
+                        "prompt_schema": null,
+                        "prompt_type": "advanced"
+                    },
+                    {
+                        "data_type": "TEXT",
+                        "description": "Landlord name",
+                        "field_id": "236876",
+                        "lines": [],
+                        "model_type": "DEFAULT",
+                        "name": "Landlord name",
+                        "position": 4,
+                        "prompt": "Landlord name",
+                        "prompt_schema": null,
+                        "prompt_type": "basic"
+                    },
+                    {
+                        "data_type": "TEXT",
+                        "description": "D",
+                        "field_id": "236877",
+                        "lines": [],
+                        "model_type": "DEFAULT",
+                        "name": "Contract signing date",
+                        "position": 1,
+                        "prompt": "Date at which the current contract has been signed.",
+                        "prompt_schema": null,
+                        "prompt_type": "advanced"
+                    },
+                    {
+                        "data_type": "TEXT",
+                        "description": "Remit to",
+                        "field_id": "236878",
+                        "lines": [],
+                        "model_type": "DEFAULT",
+                        "name": "Remit to",
+                        "position": 5,
+                        "prompt": "Is the remit to different than the landlord?",
+                        "prompt_schema": null,
+                        "prompt_type": "advanced"
+                    },
+                    {
+                        "data_type": "TEXT",
+                        "description": "W",
+                        "field_id": "236879",
+                        "lines": [],
+                        "model_type": "DEFAULT",
+                        "name": "Lease rentable area",
+                        "position": 6,
+                        "prompt": "What is the total lease rentable area",
+                        "prompt_schema": null,
+                        "prompt_type": "advanced"
+                    },
+                    {
+                        "data_type": "TEXT",
+                        "description": "WLease usable area",
+                        "field_id": "236880",
+                        "lines": [
+                            {
+                                "function_args": [],
+                                "function_id": null,
+                                "line_type": "PROMPT",
+                                "native_fn_name": null,
+                                "prompt": "keep only the amount and the unit"
+                            }
+                        ],
+                        "model_type": "DEFAULT",
+                        "name": "Lease usable area",
+                        "position": 7,
+                        "prompt": "What is the total usable area in sqm",
+                        "prompt_schema": null,
+                        "prompt_type": "advanced"
+                    },
+                    {
+                        "data_type": "TEXT",
+                        "description": "Variable rent component",
+                        "field_id": "236881",
+                        "lines": [],
+                        "model_type": "DEFAULT",
+                        "name": "Variable rent component",
+                        "position": 8,
+                        "prompt": "Does the lease has a variable rent component based on sales?",
+                        "prompt_schema": null,
+                        "prompt_type": "advanced"
+                    },
+                    {
+                        "data_type": "TEXT",
+                        "description": "Does the rent follows an index to update the rent?",
+                        "field_id": "236882",
+                        "lines": [],
+                        "model_type": "DEFAULT",
+                        "name": "Index rent and condition",
+                        "position": 10,
+                        "prompt": "Does the rent follows an index to update the rent, and if it's the case, what are the conditions",
+                        "prompt_schema": null,
+                        "prompt_type": "advanced"
+                    },
+                    {
+                        "data_type": "TEXT",
+                        "description": "Fixed rent value",
+                        "field_id": "236883",
+                        "lines": [],
+                        "model_type": "DEFAULT",
+                        "name": "Fixed or Minimum rent schedule",
+                        "position": 9,
+                        "prompt": "Rent Payment amount.",
+                        "prompt_schema": null,
+                        "prompt_type": "advanced"
+                    },
+                    {
+                        "data_type": "TEXT",
+                        "description": "Option renewal option",
+                        "field_id": "236884",
+                        "lines": [],
+                        "model_type": "DEFAULT",
+                        "name": "Option renewal or termination option",
+                        "position": 15,
+                        "prompt": "Is there a renewal or termination option on the contract?",
+                        "prompt_schema": null,
+                        "prompt_type": "advanced"
+                    },
+                    {
+                        "data_type": "TEXT",
+                        "description": "Is there a deposit to be done and what it the amount?",
+                        "field_id": "236885",
+                        "lines": [],
+                        "model_type": "DEFAULT",
+                        "name": "Is there a deposit",
+                        "position": 11,
+                        "prompt": "Is there a deposit to be done and what it the date and the amount?",
+                        "prompt_schema": null,
+                        "prompt_type": "advanced"
+                    },
+                    {
+                        "data_type": "TEXT",
+                        "description": "I",
+                        "field_id": "241023",
+                        "lines": [],
+                        "model_type": "DEFAULT",
+                        "name": "Free rent period",
+                        "position": 12,
+                        "prompt": "Is there a free rent period?",
+                        "prompt_schema": null,
+                        "prompt_type": "advanced"
+                    },
+                    {
+                        "data_type": "TEXT",
+                        "description": "Condition of tenant incentive or landlord contribution",
+                        "field_id": "241024",
+                        "lines": [],
+                        "model_type": "DEFAULT",
+                        "name": "Landlord contribution",
+                        "position": 13,
+                        "prompt": "Is there tenant incentive or landlord contribution?",
+                        "prompt_schema": null,
+                        "prompt_type": "advanced"
+                    },
+                    {
+                        "data_type": "TEXT",
+                        "description": "I",
+                        "field_id": "241025",
+                        "lines": [],
+                        "model_type": "DEFAULT",
+                        "name": "Key money",
+                        "position": 14,
+                        "prompt": "Is there any key money contribution to be paid?",
+                        "prompt_schema": null,
+                        "prompt_type": "advanced"
+                    },
+                    {
+                        "data_type": "TEXT",
+                        "description": null,
+                        "field_id": "387656",
+                        "lines": [],
+                        "model_type": "DEFAULT",
+                        "name": "Termination Clause",
+                        "position": 16,
+                        "prompt": "Termination Clause",
+                        "prompt_schema": null,
+                        "prompt_type": "advanced"
+                    },
+                    {
+                        "data_type": "TEXT",
+                        "description": "Tenant name",
+                        "field_id": "468004",
+                        "lines": [],
+                        "model_type": "DEFAULT",
+                        "name": "Tenant name",
+                        "position": 17,
+                        "prompt": "Tenant name",
+                        "prompt_schema": null,
+                        "prompt_type": "basic"
+                    }
+                ]
+            },
+            "Other": {
+                "class_id": "84707",
+                "description": "",
+                "fields": []
+            },
+            "Procurement Data": {
+                "class_id": "138077",
+                "description": "Procurement contract data extraction",
+                "fields": []
+            },
+            "document filter before": {
+                "class_id": "138079",
+                "description": "Document filtering",
+                "fields": []
+            }
+        }
+    },
+    "project_udfs": {
+        "6844": {
+            "args": [
+                {
+                    "data_type": "FIELD",
+                    "name": "Lease_rentable_area",
+                    "value": "Lease rentable area"
+                }
+            ],
+            "code": "\n\ndef validate_lease_rentable_area(Lease_rentable_area, context = {}, keys = {}, **kwargs):\n    import re\n    match = re.search('(\\\\d+(\\\\.\\\\d+)?)\\\\s*(sqm|square meters)', Lease_rentable_area, re.IGNORECASE)\n    if match:\n        area = float(match.group(1))\n        if area <= 150:\n            return 'Lease rentable area must be over 150 sqm.'\n    else:\n        return 'Lease rentable area is not explicitly mentioned in the provided document chunk.'\n    return None",
+            "docstring": "    Validates that 'Lease rentable area' must be over 150 sqm.\n\n    Parameters:\n    Lease_rentable_area (str): A string containing the lease rentable area information.\n    context (optional): Additional context for the validation, default is None.\n    **kwargs: Additional keyword arguments.\n\n    Returns:\n    str: Specific and relevant error message if validation fails, otherwise None.",
+            "examples": [
+                {
+                    "actual": true,
+                    "created_at": 1740131921000,
+                    "description": "Base case with a valid lease rentable area in sqm.",
+                    "expected": true,
+                    "fields": {
+                        "236879": "The total lease rentable area is 296 sqm."
+                    },
+                    "id": 16518,
+                    "updated_at": 1740131931000
+                },
+                {
+                    "actual": true,
+                    "created_at": 1740131921000,
+                    "description": "Valid case with a detailed description and area in square meters.",
+                    "expected": true,
+                    "fields": {
+                        "236879": "The total lease rentable area for the Gewerberaummietvertrag between Dr. Thomas Bscher and Balenciaga Germany GmbH is approximately 483.00 square meters."
+                    },
+                    "id": 16519,
+                    "updated_at": 1740131931000
+                },
+                {
+                    "actual": true,
+                    "created_at": 1740131921000,
+                    "description": "Base case with a valid lease rentable area in sqm.",
+                    "expected": true,
+                    "fields": {
+                        "236879": "The total lease rentable area is 200 sqm."
+                    },
+                    "id": 16520,
+                    "updated_at": 1740131931000
+                },
+                {
+                    "actual": true,
+                    "created_at": 1740131921000,
+                    "description": "Edge case with the lease rentable area just above the minimum threshold.",
+                    "expected": true,
+                    "fields": {
+                        "236879": "The total lease rentable area for the contract is 151 sqm."
+                    },
+                    "id": 16521,
+                    "updated_at": 1740131931000
+                },
+                {
+                    "actual": true,
+                    "created_at": 1740131921000,
+                    "description": "Base case with a valid lease rentable area in square meters.",
+                    "expected": true,
+                    "fields": {
+                        "236879": "The total lease rentable area is 300 square meters."
+                    },
+                    "id": 16522,
+                    "updated_at": 1740131931000
+                },
+                {
+                    "actual": false,
+                    "created_at": 1740131921000,
+                    "description": "Invalid case where the lease rentable area is not mentioned.",
+                    "expected": false,
+                    "fields": {
+                        "236879": "The total lease rentable area is not explicitly mentioned in the provided document chunk."
+                    },
+                    "id": 16523,
+                    "updated_at": 1740131931000
+                },
+                {
+                    "actual": false,
+                    "created_at": 1740131921000,
+                    "description": "Invalid case with a lease rentable area below the minimum threshold.",
+                    "expected": false,
+                    "fields": {
+                        "236879": "The total lease rentable area is 100 sqm."
+                    },
+                    "id": 16524,
+                    "updated_at": 1740131931000
+                },
+                {
+                    "actual": false,
+                    "created_at": 1740131921000,
+                    "description": "Edge case with the lease rentable area just below the minimum threshold.",
+                    "expected": false,
+                    "fields": {
+                        "236879": "The total lease rentable area is 149 sqm."
+                    },
+                    "id": 16525,
+                    "updated_at": 1740131931000
+                },
+                {
+                    "actual": false,
+                    "created_at": 1740131921000,
+                    "description": "Invalid case with a lease rentable area of zero.",
+                    "expected": false,
+                    "fields": {
+                        "236879": "The total lease rentable area is 0 sqm."
+                    },
+                    "id": 16526,
+                    "updated_at": 1740131931000
+                },
+                {
+                    "actual": false,
+                    "created_at": 1740131921000,
+                    "description": "Invalid case with a lease rentable area significantly below the minimum threshold.",
+                    "expected": false,
+                    "fields": {
+                        "236879": "The total lease rentable area is 50 sqm."
+                    },
+                    "id": 16527,
+                    "updated_at": 1740131931000
+                }
+            ],
+            "function_code": "    import re\n    match = re.search('(\\\\d+(\\\\.\\\\d+)?)\\\\s*(sqm|square meters)', Lease_rentable_area, re.IGNORECASE)\n    if match:\n        area = float(match.group(1))\n        if area <= 150:\n            return 'Lease rentable area must be over 150 sqm.'\n    else:\n        return 'Lease rentable area is not explicitly mentioned in the provided document chunk.'\n    return None",
+            "id": 6844,
+            "lambda_udf_id": "v1:AWS_LAMBDA:2892901861:insaprd-use2-aihub-prd-docker-default-udf:9",
+            "most_recent_results_path": "kering-test/SSC-France/fs/Instabase Drive/aihub/01921f65-30f7-7aef-9d06-15eb7d24f13f/project/modules/scripts/VALIDATIONS/376bb800-5aa9-42a3-8e77-268428d95e34_output.json",
+            "name": "validate_lease_rentable_area",
+            "project_uuid": "01921f65-30f7-7aef-9d06-15eb7d24f13f",
+            "return_type": "string",
+            "scripts_full_path": "kering-test/SSC-France/fs/Instabase Drive/aihub/01921f65-30f7-7aef-9d06-15eb7d24f13f/project/modules/scripts/VALIDATIONS/376bb800-5aa9-42a3-8e77-268428d95e34.json",
+            "type": "VALIDATIONS"
+        },
+        "6882": {
+            "args": [
+                {
+                    "data_type": "FIELD",
+                    "name": "Lease_Expiration_Date",
+                    "value": "Lease Expiration Date"
+                }
+            ],
+            "code": "\n\ndef Expiration_Date(Lease_Expiration_Date, context = {}, keys = {}, **kwargs):\n\t# Import Python packages\n\t# import json\n\tfrom datetime import datetime, timedelta\n\t# Log statements using print()\n\t# print(\"This will appear in the logs\")\n\tdatee =\"03/01/2024\"\n\t\n\tprint(type(Lease_Expiration_Date))\n\tprint(datee)\n\tprint(type(datee))\n\tif not Lease_Expiration_Date:\n\t\tprint(\"Error: Lease_Expiration_Date is empty\")\n\t\treturn \"Error: Lease_Expiration_Date is empty\"\n\ttry:\n\t\t  # Directly parse the date in DD/MM/YYYY format and convert to date object\n\t\tlease_date = datetime.strptime(Lease_Expiration_Date, \"%d/%m/%Y\")\n\t\tprint(f\"Parsed lease date: {lease_date}\")\n\texcept ValueError as e:\n\t\tprint(f\"Error: Invalid date format. Use DD/MM/YYYY. Received: {Lease_Expiration_Date}\")\n\t\treturn f\"Error: Invalid date format. Use DD/MM/YYYY. Received: {Lease_Expiration_Date}\"\n\t\n\ttoday = datetime.today()\n\tthree_months_from_now = today + timedelta(days=90)\n\tprint(f\"Today's date: {today}\")\n\tprint(f\"Three months from now: {three_months_from_now}\")\n\t\n\tif lease_date < today:\n\t\tprint(\"Alert: Lease expiration date has passed!\")\n\t\treturn \"Alert: Lease expiration date has passed!\"\n\telif lease_date <= three_months_from_now:\n\t\tprint(\"Alert: Lease expiration date is in less than three months!\")\n\t\treturn \"Alert: Lease expiration date is in less than three months!\"\n\telse:\n\t\tprint(\"No alert needed.\")\n\t\treturn None  # No alert needed",
+            "docstring": null,
+            "function_code": "\t# Import Python packages\n\t# import json\n\tfrom datetime import datetime, timedelta\n\t# Log statements using print()\n\t# print(\"This will appear in the logs\")\n\tdatee =\"03/01/2024\"\n\t\n\tprint(type(Lease_Expiration_Date))\n\tprint(datee)\n\tprint(type(datee))\n\tif not Lease_Expiration_Date:\n\t\tprint(\"Error: Lease_Expiration_Date is empty\")\n\t\treturn \"Error: Lease_Expiration_Date is empty\"\n\ttry:\n\t\t  # Directly parse the date in DD/MM/YYYY format and convert to date object\n\t\tlease_date = datetime.strptime(Lease_Expiration_Date, \"%d/%m/%Y\")\n\t\tprint(f\"Parsed lease date: {lease_date}\")\n\texcept ValueError as e:\n\t\tprint(f\"Error: Invalid date format. Use DD/MM/YYYY. Received: {Lease_Expiration_Date}\")\n\t\treturn f\"Error: Invalid date format. Use DD/MM/YYYY. Received: {Lease_Expiration_Date}\"\n\t\n\ttoday = datetime.today()\n\tthree_months_from_now = today + timedelta(days=90)\n\tprint(f\"Today's date: {today}\")\n\tprint(f\"Three months from now: {three_months_from_now}\")\n\t\n\tif lease_date < today:\n\t\tprint(\"Alert: Lease expiration date has passed!\")\n\t\treturn \"Alert: Lease expiration date has passed!\"\n\telif lease_date <= three_months_from_now:\n\t\tprint(\"Alert: Lease expiration date is in less than three months!\")\n\t\treturn \"Alert: Lease expiration date is in less than three months!\"\n\telse:\n\t\tprint(\"No alert needed.\")\n\t\treturn None  # No alert needed",
+            "id": 6882,
+            "lambda_udf_id": "v1:AWS_LAMBDA:6160281248:insaprd-use2-aihub-prd-docker-default-udf:9",
+            "most_recent_results_path": "kering-test/SSC-France/fs/Instabase Drive/aihub/01921f65-30f7-7aef-9d06-15eb7d24f13f/project/modules/scripts/VALIDATIONS/48640706-7397-4d59-9dfe-b80fa2811c10_output.json",
+            "name": "Expiration_Date",
+            "project_uuid": "01921f65-30f7-7aef-9d06-15eb7d24f13f",
+            "return_type": "string",
+            "scripts_full_path": "kering-test/SSC-France/fs/Instabase Drive/aihub/01921f65-30f7-7aef-9d06-15eb7d24f13f/project/modules/scripts/VALIDATIONS/48640706-7397-4d59-9dfe-b80fa2811c10.json",
+            "type": "VALIDATIONS"
+        }
+    },
+    "project_validations": [
+        {
+            "affected_fields": [
+                236879
+            ],
+            "alert_level": "FAILURE",
+            "created_at": 1740131873000,
+            "description": "Validation prompt",
+            "id": 6569,
+            "input_fields": [
+                236879
+            ],
+            "name": "Rule 1",
+            "params": {
+                "prompt": "\\Lease rentable area\\ must be over 150 sqm",
+                "udf_id": 6844
+            },
+            "scope": "FIELD",
+            "type": "PROMPT_UDF",
+            "updated_at": 1740131873000
+        },
+        {
+            "affected_fields": [
+                236874
+            ],
+            "alert_level": "FAILURE",
+            "created_at": 1740404102000,
+            "description": "",
+            "id": 6665,
+            "input_fields": [
+                236874
+            ],
+            "name": "Rule 2",
+            "params": {
+                "udf_id": 6882
+            },
+            "scope": "FIELD",
+            "type": "UDF",
+            "updated_at": 1740404350000
+        }
+    ],
+    "reader_profile": {
+        "createdBy": "",
+        "createdOn": 1727103737663,
+        "defaultProfile": "",
+        "foundationVersion": "",
+        "inputPath": null,
+        "lastModifiedBy": "",
+        "lastModifiedOn": 1727103737663,
+        "outputPath": null,
+        "profiles": [
+            {
+                "entitySettings": [],
+                "name": "aihub",
+                "readSettings": {
+                    "add_barcode_identifier": true,
+                    "cache_pdf_results": false,
+                    "correct_inversion": false,
+                    "correct_orientation": false,
+                    "correct_resolution": false,
+                    "correct_resolution_auto": false,
+                    "detect_barcodes": false,
+                    "detect_blurry_files": false,
+                    "dewarp_page": true,
+                    "document_mapping": "document_is_record_skip_empty_page",
+                    "enable_ibdoc_v2": true,
+                    "enable_paragraph_ordering": false,
+                    "enable_table_markdown_enrichment": false,
+                    "encryption_config": null,
+                    "entity_models": [
+                        {
+                            "model_name": "signature_model",
+                            "model_version": "0.0.4"
+                        },
+                        {
+                            "model_name": "barcode_qrcode_detection",
+                            "model_version": "1.0.0"
+                        }
+                    ],
+                    "extract_all_pdf_layers": false,
+                    "find_lines": false,
+                    "fonts": null,
+                    "force_image_ocr": false,
+                    "image_filters": null,
+                    "languages": [
+                        "en"
+                    ],
+                    "layout_algorithm": "layout_algo_spatial",
+                    "model_specific_settings": {
+                        "marx_v1": {
+                            "version": "layout_v3"
+                        }
+                    },
+                    "native_excel_processing": true,
+                    "ocr_page_type": "marx",
+                    "ocr_timeout": null,
+                    "output_format_layout": "layout_per_page",
+                    "output_formats": null,
+                    "page_range_str": "",
+                    "preprocess_excel_files": false,
+                    "process_type": "auto_to_txt",
+                    "produce_metadata_list": true,
+                    "produce_word_metadata": true,
+                    "remove_boxes": false,
+                    "remove_boxes_over_height_percent": null,
+                    "remove_boxes_over_width_percent": null,
+                    "remove_space_wordpolys": true,
+                    "remove_vertical_text": false,
+                    "reorient_words": false,
+                    "repair_pdfs": false,
+                    "scripts_dir": "",
+                    "write_converted_image": true,
+                    "write_thumbnail": true
+                }
+            }
+        ],
+        "schema": "1"
+    }
+}

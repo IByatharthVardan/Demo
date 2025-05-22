@@ -1,0 +1,25 @@
+{
+    "appReleaseVersion": "",
+    "author": "yatharth.vardan.kering_instabase.com",
+    "contextAccount": "kering-test",
+    "createdAtMs": "1747931933000",
+    "description": "No release notes",
+    "id": "0f3d8bc9-5985-4b76-90e4-aa149564471c",
+    "isCustomizable": false,
+    "linkSharingMode": "OFF",
+    "metadata": "{\"authors\": [\"yatharth.vardan.kering_instabase.com\"], \"icon\": \"icon.png\", \"samples\": \"\", \"results\": \"\", \"schema\": \"schema.json\", \"project_id\": \"01921f65-30f7-7aef-9d06-15eb7d24f13f\", \"billing_model\": \"default\", \"has_project_snapshot\": true, \"org_context_type\": \"ENTERPRISE\", \"is_copy_of_existing_app\": false}",
+    "name": "SSC-France-Contract-Parser",
+    "owner": "yatharth.vardan.kering_instabase.com",
+    "ownerFullName": "Yatharth Vardan",
+    "sharedAccounts": [
+        "kering-test"
+    ],
+    "solutionType": "EXTRACTION",
+    "solution_path": "system/global/fs/Instabase Drive/Applications/Deployed/All/0f3d8bc9-5985-4b76-90e4-aa149564471c",
+    "state": "PRODUCTION",
+    "summary": "No summary",
+    "updateMode": "AUTO_UPDATE",
+    "updatedAtMs": "1747931939000",
+    "version": "0.0.1",
+    "visibility": "PRIVATE"
+}

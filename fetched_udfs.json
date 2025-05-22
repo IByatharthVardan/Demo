@@ -1,0 +1,143 @@
+{
+    "3357": {
+        "args": [
+            {
+                "data_type": "FIELD",
+                "name": "Lease_Expiration_Date",
+                "value": "Lease Expiration Date"
+            }
+        ],
+        "code": "\t# Import Python packages\n\t# import json\n\t\n\t# Log statements using print()\n\t# print(\"This will appear in the logs\")\n\t\n\tif Lease_Expiration_Date:\n\t\t# Return None to indicate validation passed\n\t\treturn none\n\telse:\n\t\t# Return a string to indicate validation failed\n\t\treturn \"Error: Lease_Expiration_Date is empty\"",
+        "docstring": null,
+        "lambda_end_of_life": null,
+        "lambda_id": "8",
+        "lambda_udf_id": "v1:AWS_LAMBDA:2877204814:insaprd-use2-aihub-prd-docker-default-udf:7",
+        "last_updated_at": "1727103581000",
+        "name": "unnamed_custom_function",
+        "udf_type": "VALIDATIONS"
+    },
+    "6551": {
+        "args": [],
+        "code": "\treturn None",
+        "docstring": null,
+        "lambda_end_of_life": null,
+        "lambda_id": "10",
+        "lambda_udf_id": "v1:AWS_LAMBDA:1655542618:insaprd-use2-aihub-prd-docker-default-udf:9",
+        "last_updated_at": "1739804337000",
+        "name": "unnamed_custom_function",
+        "udf_type": "VALIDATIONS"
+    },
+    "6807": {
+        "args": [
+            {
+                "data_type": "FIELD",
+                "name": "Lease_Expiration_Date",
+                "value": "Lease Expiration Date"
+            }
+        ],
+        "code": "    import dateparser\n    import datetime\n    expiration_date = dateparser.parse(Lease_Expiration_Date)\n    if expiration_date is None:\n        return \"Invalid date format for 'Lease Expiration Date'.\"\n    cutoff_date = datetime.datetime(2026, 1, 1)\n    if expiration_date >= cutoff_date:\n        return \"'Lease Expiration Date' must be before 2026.\"\n    return None",
+        "docstring": "    Validates that 'Lease Expiration Date' must be before 2026.\n\n    Parameters:\n    Lease_Expiration_Date (str): The date string indicating when the lease expires.\n    context (optional): Additional context for the validation, default is None.\n    **kwargs: Additional keyword arguments.\n\n    Returns:\n    str: Specific and relevant error message if validation fails, otherwise None.",
+        "lambda_end_of_life": null,
+        "lambda_id": "10",
+        "lambda_udf_id": "v1:AWS_LAMBDA:3029942964:insaprd-use2-aihub-prd-docker-default-udf:9",
+        "last_updated_at": "1740060884000",
+        "name": "validate_lease_expiration_date",
+        "udf_type": "VALIDATIONS"
+    },
+    "6808": {
+        "args": [],
+        "code": "\treturn None",
+        "docstring": null,
+        "lambda_end_of_life": null,
+        "lambda_id": "10",
+        "lambda_udf_id": "v1:AWS_LAMBDA:2537674816:insaprd-use2-aihub-prd-docker-default-udf:9",
+        "last_updated_at": "1740061571000",
+        "name": "unnamed_custom_function",
+        "udf_type": "VALIDATIONS"
+    },
+    "6809": {
+        "args": [
+            {
+                "data_type": "FIELD",
+                "name": "Lease_rentable_area",
+                "value": "Lease rentable area"
+            }
+        ],
+        "code": "\t# Import Python packages\n\t# import json\n\t\n\t# Log statements using print()\n\t# print(\"This will appear in the logs\")\n\t\n\tif Lease_rentable_area:\n\t\t# Return None to indicate validation passed\n\t\treturn None\n\telse:\n\t\t# Return a string to indicate validation failed\n\t\treturn \"Error: Lease_rentable_area is empty\"",
+        "docstring": null,
+        "lambda_end_of_life": null,
+        "lambda_id": "10",
+        "lambda_udf_id": "v1:AWS_LAMBDA:4022577020:insaprd-use2-aihub-prd-docker-default-udf:9",
+        "last_updated_at": "1740061607000",
+        "name": "unnamed_custom_function",
+        "udf_type": "VALIDATIONS"
+    },
+    "6810": {
+        "args": [
+            {
+                "data_type": "FIELD",
+                "name": "Lease_rentable_area",
+                "value": "Lease rentable area"
+            }
+        ],
+        "code": "    import re\n    match = re.search('(\\\\d+(\\\\.\\\\d+)?)\\\\s*(sqm|square meters)', Lease_rentable_area, re.IGNORECASE)\n    if match:\n        area = float(match.group(1))\n        if area < 150:\n            return 'Lease rentable area must be at least 150 square meters.'\n    else:\n        return 'Lease rentable area is not explicitly mentioned in the provided document chunk.'\n    return None",
+        "docstring": "    Validates that 'Lease rentable area' must be at least 150 square meters.\n\n    Parameters:\n    Lease_rentable_area (str): A string containing the lease rentable area information.\n    context (optional): Additional context for the validation, defaults to None.\n    **kwargs: Additional keyword arguments.\n\n    Returns:\n    str: A specific and relevant error message if validation fails, otherwise None.",
+        "lambda_end_of_life": null,
+        "lambda_id": "10",
+        "lambda_udf_id": "v1:AWS_LAMBDA:3010704539:insaprd-use2-aihub-prd-docker-default-udf:9",
+        "last_updated_at": "1740061762000",
+        "name": "validate_lease_rentable_area",
+        "udf_type": "VALIDATIONS"
+    },
+    "6844": {
+        "args": [
+            {
+                "data_type": "FIELD",
+                "name": "Lease_rentable_area",
+                "value": "Lease rentable area"
+            }
+        ],
+        "code": "    import re\n    match = re.search('(\\\\d+(\\\\.\\\\d+)?)\\\\s*(sqm|square meters)', Lease_rentable_area, re.IGNORECASE)\n    if match:\n        area = float(match.group(1))\n        if area <= 150:\n            return 'Lease rentable area must be over 150 sqm.'\n    else:\n        return 'Lease rentable area is not explicitly mentioned in the provided document chunk.'\n    return None",
+        "docstring": "    Validates that 'Lease rentable area' must be over 150 sqm.\n\n    Parameters:\n    Lease_rentable_area (str): A string containing the lease rentable area information.\n    context (optional): Additional context for the validation, default is None.\n    **kwargs: Additional keyword arguments.\n\n    Returns:\n    str: Specific and relevant error message if validation fails, otherwise None.",
+        "lambda_end_of_life": null,
+        "lambda_id": "10",
+        "lambda_udf_id": "v1:AWS_LAMBDA:2892901861:insaprd-use2-aihub-prd-docker-default-udf:9",
+        "last_updated_at": "1740131931000",
+        "name": "validate_lease_rentable_area",
+        "udf_type": "VALIDATIONS"
+    },
+    "6881": {
+        "args": [
+            {
+                "data_type": "FIELD",
+                "name": "Lease_Expiration_Date",
+                "value": "Lease Expiration Date"
+            }
+        ],
+        "code": "    import dateparser\n    from datetime import datetime, timedelta\n    parsed_date = dateparser.parse(Lease_Expiration_Date)\n    if not parsed_date:\n        return \"Invalid date format in 'Lease Expiration Date'.\"\n    three_months_from_now = datetime.now() + timedelta(days=90)\n    if parsed_date <= three_months_from_now:\n        return \"'Lease Expiration Date' must be more than 3 months from today.\"\n    return None",
+        "docstring": "    Validates that 'Lease Expiration Date' must be in more than 3 months.\n\n    Parameters:\n    Lease_Expiration_Date (str): The lease expiration date in a string format, which can be a part of a sentence.\n    context (optional): Additional context, default is None.\n    **kwargs: Additional keyword arguments.\n\n    Returns:\n    str: Specific and relevant error message if validation fails, otherwise None.",
+        "lambda_end_of_life": null,
+        "lambda_id": "10",
+        "lambda_udf_id": "v1:AWS_LAMBDA:1772454754:insaprd-use2-aihub-prd-docker-default-udf:9",
+        "last_updated_at": "1740403942000",
+        "name": "validate_lease_expiration_date",
+        "udf_type": "VALIDATIONS"
+    },
+    "6882": {
+        "args": [
+            {
+                "data_type": "FIELD",
+                "name": "Lease_Expiration_Date",
+                "value": "Lease Expiration Date"
+            }
+        ],
+        "code": "\t# Import Python packages\n\t# import json\n\tfrom datetime import datetime, timedelta\n\t# Log statements using print()\n\t# print(\"This will appear in the logs\")\n\tdatee =\"03/01/2024\"\n\t\n\tprint(type(Lease_Expiration_Date))\n\tprint(datee)\n\tprint(type(datee))\n\tif not Lease_Expiration_Date:\n\t\tprint(\"Error: Lease_Expiration_Date is empty\")\n\t\treturn \"Error: Lease_Expiration_Date is empty\"\n\ttry:\n\t\t  # Directly parse the date in DD/MM/YYYY format and convert to date object\n\t\tlease_date = datetime.strptime(Lease_Expiration_Date, \"%d/%m/%Y\")\n\t\tprint(f\"Parsed lease date: {lease_date}\")\n\texcept ValueError as e:\n\t\tprint(f\"Error: Invalid date format. Use DD/MM/YYYY. Received: {Lease_Expiration_Date}\")\n\t\treturn f\"Error: Invalid date format. Use DD/MM/YYYY. Received: {Lease_Expiration_Date}\"\n\t\n\ttoday = datetime.today()\n\tthree_months_from_now = today + timedelta(days=90)\n\tprint(f\"Today's date: {today}\")\n\tprint(f\"Three months from now: {three_months_from_now}\")\n\t\n\tif lease_date < today:\n\t\tprint(\"Alert: Lease expiration date has passed!\")\n\t\treturn \"Alert: Lease expiration date has passed!\"\n\telif lease_date <= three_months_from_now:\n\t\tprint(\"Alert: Lease expiration date is in less than three months!\")\n\t\treturn \"Alert: Lease expiration date is in less than three months!\"\n\telse:\n\t\tprint(\"No alert needed.\")\n\t\treturn None  # No alert needed",
+        "docstring": null,
+        "lambda_end_of_life": null,
+        "lambda_id": "10",
+        "lambda_udf_id": "v1:AWS_LAMBDA:6160281248:insaprd-use2-aihub-prd-docker-default-udf:9",
+        "last_updated_at": "1740404349000",
+        "name": "Expiration_Date",
+        "udf_type": "VALIDATIONS"
+    }
+}
