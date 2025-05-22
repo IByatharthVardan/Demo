@@ -1,7 +1,7 @@
 {
     "projects": [
         {
-            "active_deployed_solution_id": null,
+            "active_deployed_solution_id": "e706716f-aa7b-4a4a-beac-213401a7cf3c",
             "createdAtMs": "1745920407000",
             "creation_base": "NONE",
             "data_root": "kering-test/Utilities-Workspace-Dev/fs/Instabase Drive/aihub/019680f7-340f-7fb6-a3ea-81666822aed5",
