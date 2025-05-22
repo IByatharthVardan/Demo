@@ -1,19 +1,19 @@
 {
     "source": {
         "is_advanced": false,
-        "project_id": "0196154c-7d2e-7806-bbab-dc4e75b8ee62",
+        "project_id": "0195ad8c-4742-799a-a07e-37ddb52ecf11",
         "flow_path":  "",
         "sb_name": "",
         "flow_name": "",
         "org": "kering-test",
-        "workspace": "Procurement-Workspace-Dev",
-        "app_id": "2546d3bf-4d3d-48e4-8319-2a2ca0be4b1b",
-        "deployment_id": "",
+        "workspace": "SSC-France",
+        "app_id": "50c0ddca-e60f-40a9-ac68-17465998f3dd",
+        "deployment_id": "0195ad98-876c-73e2-bf28-5b27726e68fc",
         "dependencies": []
     },
     "target": {
         "org": "kering",
-        "workspace": "Procurement-Workspace-Dev",
+        "workspace": "SSC-France",
         "project_id":""
     },
     "settings": {

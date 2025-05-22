@@ -1,4 +1,20 @@
 {
-    "last_updated": 0,
-    "rules": []
+    "last_updated": 1742828798000,
+    "rules": [
+        {
+            "affected_fields": [],
+            "alert_level": "FAILURE",
+            "created_at": 1742828798000,
+            "description": "",
+            "id": 8420,
+            "input_fields": [],
+            "name": "Rule 1",
+            "params": {
+                "confidence_threshold": 0.95
+            },
+            "scope": "PROJECT",
+            "type": "CONFIDENCE",
+            "updated_at": 1742828798000
+        }
+    ]
 }

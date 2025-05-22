@@ -1,28 +1,28 @@
 {
     "projects": [
         {
-            "active_deployed_solution_id": "2546d3bf-4d3d-48e4-8319-2a2ca0be4b1b",
-            "createdAtMs": "1744114057000",
+            "active_deployed_solution_id": null,
+            "createdAtMs": "1742373407000",
             "creation_base": "PROJECT",
-            "data_root": "kering-test/Procurement-Workspace-Dev/fs/Instabase Drive/aihub/0196154c-7d2e-7806-bbab-dc4e75b8ee62",
+            "data_root": "kering-test/SSC-France/fs/Instabase Drive/aihub/0195ad8c-4742-799a-a07e-37ddb52ecf11",
             "desc": "",
             "extraction_mode": "CLASSIFICATION",
-            "id": "0196154c-7d2e-7806-bbab-dc4e75b8ee62",
+            "id": "0195ad8c-4742-799a-a07e-37ddb52ecf11",
             "llm": "gpt-3.5-turbo",
             "matches_default_drive": true,
-            "name": "procurement-app",
+            "name": "Lease-Contract-Parser-2.0",
             "needs_migration": false,
             "owner": "1ba49c08-d800-4029-981f-c8b992f2b967",
             "ownerPublicId": "khadija.boubahri-ext_kering.com",
-            "project_root": "kering-test/Procurement-Workspace-Dev/fs/Instabase Drive/aihub/0196154c-7d2e-7806-bbab-dc4e75b8ee62",
+            "project_root": "kering-test/SSC-France/fs/Instabase Drive/aihub/0195ad8c-4742-799a-a07e-37ddb52ecf11",
             "reader_profile": {
                 "createdBy": "",
-                "createdOn": 1744116588548,
+                "createdOn": 1741771465457,
                 "defaultProfile": "",
                 "foundationVersion": "",
                 "inputPath": null,
                 "lastModifiedBy": "",
-                "lastModifiedOn": 1744116588548,
+                "lastModifiedOn": 1741771465457,
                 "outputPath": null,
                 "profiles": [
                     {
@@ -92,7 +92,7 @@
                 ],
                 "schema": "1"
             },
-            "repo_id": "a39a8ab3-a356-4926-948f-52e2e875c222",
+            "repo_id": "7e2577e9-7ad0-4026-a136-0ddd99113add",
             "settings": {
                 "advanced_ocr": {
                     "isChangeLanguageType": false,
@@ -106,8 +106,8 @@
                     "version": "v1"
                 }
             },
-            "updatedAtMs": "1744116552000",
-            "workspace": "Procurement-Workspace-Dev"
+            "updatedAtMs": "1742828759000",
+            "workspace": "SSC-France"
         }
     ]
 }
