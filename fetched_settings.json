@@ -1,28 +1,28 @@
 {
     "projects": [
         {
-            "active_deployed_solution_id": "0f3d8bc9-5985-4b76-90e4-aa149564471c",
-            "createdAtMs": "1727103578000",
+            "active_deployed_solution_id": "2546d3bf-4d3d-48e4-8319-2a2ca0be4b1b",
+            "createdAtMs": "1744114057000",
             "creation_base": "PROJECT",
-            "data_root": "kering-test/SSC-France/fs/Instabase Drive/aihub/01921f65-30f7-7aef-9d06-15eb7d24f13f",
+            "data_root": "kering-test/Procurement-Workspace-Dev/fs/Instabase Drive/aihub/0196154c-7d2e-7806-bbab-dc4e75b8ee62",
             "desc": "",
             "extraction_mode": "CLASSIFICATION",
-            "id": "01921f65-30f7-7aef-9d06-15eb7d24f13f",
+            "id": "0196154c-7d2e-7806-bbab-dc4e75b8ee62",
             "llm": "gpt-3.5-turbo",
             "matches_default_drive": true,
-            "name": "SSC-France-Contract-Parser",
+            "name": "procurement-app",
             "needs_migration": false,
-            "owner": "e0109f22-ce37-42e1-a50b-7d95d3f5fd33",
-            "ownerPublicId": "romain.isaac_kering.com",
-            "project_root": "kering-test/SSC-France/fs/Instabase Drive/aihub/01921f65-30f7-7aef-9d06-15eb7d24f13f",
+            "owner": "1ba49c08-d800-4029-981f-c8b992f2b967",
+            "ownerPublicId": "khadija.boubahri-ext_kering.com",
+            "project_root": "kering-test/Procurement-Workspace-Dev/fs/Instabase Drive/aihub/0196154c-7d2e-7806-bbab-dc4e75b8ee62",
             "reader_profile": {
                 "createdBy": "",
-                "createdOn": 1727103737663,
+                "createdOn": 1744116588548,
                 "defaultProfile": "",
                 "foundationVersion": "",
                 "inputPath": null,
                 "lastModifiedBy": "",
-                "lastModifiedOn": 1727103737663,
+                "lastModifiedOn": 1744116588548,
                 "outputPath": null,
                 "profiles": [
                     {
@@ -56,7 +56,7 @@
                             "extract_all_pdf_layers": false,
                             "find_lines": false,
                             "fonts": null,
-                            "force_image_ocr": false,
+                            "force_image_ocr": true,
                             "image_filters": null,
                             "languages": [
                                 "en"
@@ -92,7 +92,7 @@
                 ],
                 "schema": "1"
             },
-            "repo_id": "7e2577e9-7ad0-4026-a136-0ddd99113add",
+            "repo_id": "a39a8ab3-a356-4926-948f-52e2e875c222",
             "settings": {
                 "advanced_ocr": {
                     "isChangeLanguageType": false,
@@ -102,11 +102,12 @@
                     "languageType": "standard",
                     "nativeExcelProcessing": true,
                     "pagesText": "",
+                    "splitByPage": false,
                     "version": "v1"
                 }
             },
-            "updatedAtMs": "1740404049000",
-            "workspace": "SSC-France"
+            "updatedAtMs": "1744116552000",
+            "workspace": "Procurement-Workspace-Dev"
         }
     ]
 }
