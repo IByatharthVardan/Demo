@@ -1,20 +1,44 @@
 {
-    "last_updated": 1742828798000,
+    "last_updated": 1740404350000,
     "rules": [
         {
-            "affected_fields": [],
+            "affected_fields": [
+                236879
+            ],
             "alert_level": "FAILURE",
-            "created_at": 1742828798000,
-            "description": "",
-            "id": 8420,
-            "input_fields": [],
+            "created_at": 1740131873000,
+            "description": "Validation prompt",
+            "id": 6569,
+            "input_fields": [
+                236879
+            ],
             "name": "Rule 1",
             "params": {
-                "confidence_threshold": 0.95
+                "prompt": "\\Lease rentable area\\ must be over 150 sqm",
+                "udf_id": 6844
             },
-            "scope": "PROJECT",
-            "type": "CONFIDENCE",
-            "updated_at": 1742828798000
+            "scope": "FIELD",
+            "type": "PROMPT_UDF",
+            "updated_at": 1740131873000
+        },
+        {
+            "affected_fields": [
+                236874
+            ],
+            "alert_level": "FAILURE",
+            "created_at": 1740404102000,
+            "description": "",
+            "id": 6665,
+            "input_fields": [
+                236874
+            ],
+            "name": "Rule 2",
+            "params": {
+                "udf_id": 6882
+            },
+            "scope": "FIELD",
+            "type": "UDF",
+            "updated_at": 1740404350000
         }
     ]
 }

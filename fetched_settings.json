@@ -1,28 +1,28 @@
 {
     "projects": [
         {
-            "active_deployed_solution_id": null,
-            "createdAtMs": "1742373407000",
+            "active_deployed_solution_id": "0f3d8bc9-5985-4b76-90e4-aa149564471c",
+            "createdAtMs": "1727103578000",
             "creation_base": "PROJECT",
-            "data_root": "kering-test/SSC-France/fs/Instabase Drive/aihub/0195ad8c-4742-799a-a07e-37ddb52ecf11",
+            "data_root": "kering-test/SSC-France/fs/Instabase Drive/aihub/01921f65-30f7-7aef-9d06-15eb7d24f13f",
             "desc": "",
             "extraction_mode": "CLASSIFICATION",
-            "id": "0195ad8c-4742-799a-a07e-37ddb52ecf11",
+            "id": "01921f65-30f7-7aef-9d06-15eb7d24f13f",
             "llm": "gpt-3.5-turbo",
             "matches_default_drive": true,
-            "name": "Lease-Contract-Parser-2.0",
+            "name": "SSC-France-Contract-Parser",
             "needs_migration": false,
-            "owner": "1ba49c08-d800-4029-981f-c8b992f2b967",
-            "ownerPublicId": "khadija.boubahri-ext_kering.com",
-            "project_root": "kering-test/SSC-France/fs/Instabase Drive/aihub/0195ad8c-4742-799a-a07e-37ddb52ecf11",
+            "owner": "e0109f22-ce37-42e1-a50b-7d95d3f5fd33",
+            "ownerPublicId": "romain.isaac_kering.com",
+            "project_root": "kering-test/SSC-France/fs/Instabase Drive/aihub/01921f65-30f7-7aef-9d06-15eb7d24f13f",
             "reader_profile": {
                 "createdBy": "",
-                "createdOn": 1741771465457,
+                "createdOn": 1727103737663,
                 "defaultProfile": "",
                 "foundationVersion": "",
                 "inputPath": null,
                 "lastModifiedBy": "",
-                "lastModifiedOn": 1741771465457,
+                "lastModifiedOn": 1727103737663,
                 "outputPath": null,
                 "profiles": [
                     {
@@ -56,7 +56,7 @@
                             "extract_all_pdf_layers": false,
                             "find_lines": false,
                             "fonts": null,
-                            "force_image_ocr": true,
+                            "force_image_ocr": false,
                             "image_filters": null,
                             "languages": [
                                 "en"
@@ -102,11 +102,10 @@
                     "languageType": "standard",
                     "nativeExcelProcessing": true,
                     "pagesText": "",
-                    "splitByPage": false,
                     "version": "v1"
                 }
             },
-            "updatedAtMs": "1742828759000",
+            "updatedAtMs": "1740404049000",
             "workspace": "SSC-France"
         }
     ]
