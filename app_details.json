@@ -1,0 +1,25 @@
+{
+    "appReleaseVersion": "25.26",
+    "author": "balusa.prasad.ctr_instabase.com",
+    "contextAccount": "axauk",
+    "createdAtMs": "1756389203000",
+    "description": "BP-62047  -  HITL Extracted Values Incorrect\nBP-62151  -  Business description in CCE class",
+    "id": "4c19ba6a-9963-4210-a2f9-a6e00331f9c9",
+    "isCustomizable": false,
+    "linkSharingMode": "OFF",
+    "metadata": "{\"authors\": [\"balusa.prasad.ctr_instabase.com\"], \"icon\": \"icon.png\", \"samples\": \"\", \"results\": \"\", \"schema\": \"schema.json\", \"is_advanced\": true, \"billing_model\": \"default\", \"is_copy_of_existing_app\": false}",
+    "name": "Fleet Solution Demo",
+    "owner": "instabase",
+    "ownerFullName": "",
+    "sharedAccounts": [
+        "axauk"
+    ],
+    "solutionType": "EXTRACTION",
+    "solution_path": "system/global/fs/Instabase Drive/Applications/Deployed/All/4c19ba6a-9963-4210-a2f9-a6e00331f9c9",
+    "state": "PRODUCTION",
+    "summary": "Fleet Solution Demo",
+    "updateMode": "UPDATE_WHEN_EXPIRED",
+    "updatedAtMs": "1756389209000",
+    "version": "0.0.12",
+    "visibility": "PRIVATE"
+}
