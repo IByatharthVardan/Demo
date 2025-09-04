@@ -1,13 +1,13 @@
 {
     "source": {
-        "is_advanced": true,
-        "project_id": "0199089b-c565-74b1-8949-42dffc3641da",
-        "flow_path":  "axauk/dev-si-fleet/fs/Instabase Drive/Production Flow/excel_50_trigger_17_july/aug 28/master/codelabs.ibflow",
+        "is_advanced": false,
+        "project_id": "0198ef37-d998-7864-878d-539c9c7ddd98",
+        "flow_path":  "",
         "sb_name": "",
         "flow_name": "",
         "org": "axauk",
         "workspace": "stage-si",
-        "app_id": "4c19ba6a-9963-4210-a2f9-a6e00331f9c9",
+        "app_id": "1d7a5b9f-d0fe-4fb7-a7d3-3bb55e03f6ac",
         "deployment_id": "",
         "dependencies": []
     },
