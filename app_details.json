@@ -1,0 +1,25 @@
+{
+    "appReleaseVersion": "",
+    "author": "balusa.prasad.ctr_instabase.com",
+    "contextAccount": "axauk",
+    "createdAtMs": "1756384973000",
+    "description": "No release notes",
+    "id": "1d7a5b9f-d0fe-4fb7-a7d3-3bb55e03f6ac",
+    "isCustomizable": false,
+    "linkSharingMode": "OFF",
+    "metadata": "{\"authors\": [\"balusa.prasad.ctr_instabase.com\"], \"icon\": \"icon.png\", \"samples\": \"\", \"results\": \"\", \"schema\": \"schema.json\", \"project_id\": \"0198ef37-d998-7864-878d-539c9c7ddd98\", \"billing_model\": \"default\", \"has_project_snapshot\": true, \"org_context_type\": \"ENTERPRISE\", \"is_copy_of_existing_app\": false}",
+    "name": "Fleet Master Build Aug28 - V0.0.12",
+    "owner": "balusa.prasad.ctr_instabase.com",
+    "ownerFullName": "Balusa Prasad",
+    "sharedAccounts": [
+        "axauk"
+    ],
+    "solutionType": "EXTRACTION",
+    "solution_path": "system/global/fs/Instabase Drive/Applications/Deployed/All/1d7a5b9f-d0fe-4fb7-a7d3-3bb55e03f6ac",
+    "state": "PRODUCTION",
+    "summary": "No summary",
+    "updateMode": "AUTO_UPDATE",
+    "updatedAtMs": "1756384980000",
+    "version": "0.0.2",
+    "visibility": "PRIVATE"
+}
