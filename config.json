@@ -1,0 +1,24 @@
+{
+    "source": {
+        "is_advanced": false,
+        "project_id": "0198ef37-d998-7864-878d-539c9c7ddd98",
+        "flow_path":  "",
+        "sb_name": "",
+        "flow_name": "",
+        "org": "axauk",
+        "workspace": "stage-si",
+        "app_id": "1d7a5b9f-d0fe-4fb7-a7d3-3bb55e03f6ac",
+        "deployment_id": "",
+        "dependencies": []
+    },
+    "target": {
+        "org": "ib-internal",
+        "workspace": "SolEng_workspace",
+        "project_id":""
+    },
+    "settings": {
+        "rebuild": true
+    },
+    "regression": {},
+    "release_notes": "Migration from ST instance to MT instance"
+}
